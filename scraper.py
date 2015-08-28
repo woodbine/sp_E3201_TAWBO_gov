@@ -59,7 +59,7 @@ def convert_mth_strings ( mth_string ):
 # pull down the content from the webpage
 for url in urls:
     html = urllib2.urlopen(url)
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, 'lxml')
     # find all entries with the required class
     block = soup.find('ul', 'item-list')
     links = block.find_all('a')
@@ -73,7 +73,7 @@ for url in urls:
         urls = link['href']
 
         html_csv = urllib2.urlopen(urls)
-        soup_csv = BeautifulSoup(html_csv)
+        soup_csv = BeautifulSoup(html_csv, 'lxml')
         url = soup_csv.find('a', 'button button__primary')
         file_url = url['href']
         validFilename = validateFilename(filename)
