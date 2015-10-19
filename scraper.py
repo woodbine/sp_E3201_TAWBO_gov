@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 
 #### IMPORTS 1.0
@@ -91,17 +90,19 @@ urls = ["http://www.telford.gov.uk/downloads/download/64/expenditure_over_100_-_
        "http://www.telford.gov.uk/downloads/download/65/expenditure_over_100_-_2014", "http://www.telford.gov.uk/downloads/download/457/expenditure_over_100_-_2015"]
 errors = 0
 data = []
+url = 'http://example.com'
 
 #### READ HTML 1.0
 
 
-for url in urls:
-    html = urllib2.urlopen(url)
-    soup = BeautifulSoup(html, 'lxml')
+html = urllib2.urlopen(url)
+soup = BeautifulSoup(html, 'lxml')
 
 
 #### SCRAPE DATA
-
+for url in urls:
+    html = urllib2.urlopen(url)
+    soup = BeautifulSoup(html, 'lxml')
     block = soup.find('ul', 'item-list')
     links = block.find_all('a')
     for link in links:
