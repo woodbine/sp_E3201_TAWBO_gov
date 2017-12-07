@@ -87,7 +87,8 @@ def convert_mth_strings ( mth_string ):
 
 entity_id = "E3201_TAWBO_gov"
 urls = ["http://www.telford.gov.uk/downloads/download/64/expenditure_over_100_-_2012","http://www.telford.gov.uk/downloads/download/14/expenditure_over_100_-_2013",
-       "http://www.telford.gov.uk/downloads/download/65/expenditure_over_100_-_2014", "http://www.telford.gov.uk/downloads/download/457/expenditure_over_100_-_2015"]
+       "http://www.telford.gov.uk/downloads/download/65/expenditure_over_100_-_2014", "http://www.telford.gov.uk/downloads/download/457/expenditure_over_100_-_2015",
+        "http://www.telford.gov.uk/downloads/download/1047/expenditure_over_100_-_2017"]
 errors = 0
 data = []
 url = 'http://example.com'
